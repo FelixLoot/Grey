@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./includes/head.ejs') %>
+<body class="">
+    <%- include('./includes/navbar.ejs') %>
+
+    <% var Count; for(Count in array){ %>
+        <% var User = array[Count]; %>
+            <div class="package">
+            <h4 id="name"><%= User.title %></h4>
+            </div>
+      <% } %>
+</body>
+</html>

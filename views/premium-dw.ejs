@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./includes/head.ejs') %>
+<body class="">
+    <%- include('./includes/navbar.ejs') %>
+
+    <div class="boxes lg:flex lg:p-10">
+    <% var Count; for(Count in array){ %>
+        <% var User = array[Count]; %>
+            <div class="package w-100 lg:w-1/3 mx-auto rounded-2xl">
+                <div class="top-box lg:flex rounded-1xl p-4">
+                    <img class="lg:w-1/2 self-center" src="<%-User.image%>" alt="">
+                    <h2 class="self-center text-white text-2xl text-center mx-auto" id="name"><%= User.title %></h2>
+                </div>
+                <p class="text-white p-8 block mx-auto"><%-User.description%></p>
+                <div class="preview p-8">
+
+                </div>
+                <a href="" class="download_btn block m-8 text-center">Download</a>
+            </div>
+      <% } %>
+    </div>
+</body>
+</html>
