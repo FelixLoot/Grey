@@ -1,19 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100&display=swap');
 .package img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    overflow-x: hidden;
 }
 .package {
     max-width: 400px;
-    background: #757F9A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
-    
-
+    transition: 0.5s;
 }
 .package h2 {
     font-family: 'Londrina Solid', cursive;
+}
+
+.boxes {
+    max-width: 1600px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.package a {
+    background-color: white;
+}
+.package h2 {
+    font-weight: 700;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.package:hover .p-image {
+    display: none;
+}
+.desc {
+    display: none;
+}
+.package:hover .desc {
+    display: block;
+}
+.p-image {
 }

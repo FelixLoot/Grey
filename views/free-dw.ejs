@@ -4,11 +4,17 @@
 <body class="">
     <%- include('./includes/navbar.ejs') %>
 
+    <div class="boxes lg:flex lg:p-10 lg:mx-auto">
     <% var Count; for(Count in array){ %>
         <% var User = array[Count]; %>
-            <div class="package">
-            <h4 id="name"><%= User.title %></h4>
+            <div class="package w-100 lg:w-1/3 mx-auto rounded-2xl m-8">
+                <div class="top-box rounded-2xl">
+                    <h2 class="self-center text-black text-2xl text-center mx-auto py-10 bg-white" id="name"><%= User.title %></h2>
+                    <img class="self-center mx-auto" src="<%-User.image%>" alt="">
+                </div>
+                <a href="" class="download_btn block text-center p-4 text-3xl">DOWNLOAD FOR FREE</a>
             </div>
       <% } %>
+    </div>
 </body>
 </html>

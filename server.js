@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
 
 app.get('/free', (req,res) => {
     let info = []
-    let files = fs.readdirSync('./public/articels/free')
+    let files = fs.readdirSync('./public/products/free')
     files.forEach(Element => {
-        let fileInfo = fs.readFileSync(`./public/articels/free/${Element}`)
+        let fileInfo = fs.readFileSync(`./public/products/free/${Element}`)
         let student = JSON.parse(fileInfo)
         info.push(student)
     })
@@ -27,9 +27,9 @@ app.get('/free', (req,res) => {
 
 app.get('/premium', (req,res) => {
     let info = []
-    let files = fs.readdirSync('./public/articels/premium')
+    let files = fs.readdirSync('./public/products/premium')
     files.forEach(Element => {
-        let fileInfo = fs.readFileSync(`./public/articels/premium/${Element}`)
+        let fileInfo = fs.readFileSync(`./public/products/premium/${Element}`)
         let student = JSON.parse(fileInfo)
         info.push(student)
     })
